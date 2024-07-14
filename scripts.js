@@ -81,10 +81,9 @@ function init()
     //아이콘 생성 버튼 생성
     for(var i = 0; i <= icon_buttons_num; i++)
     {
-        preload_images("https://github.com/ABER1047/PrettierGithub/blob/main/imgs","png",i);
         icon_buttons[i] = document.createElement("img");
         icon_buttons[i].style.top = (c_h*0.2 + floor(i/icon_buttons_max_width)*42)+"px";
-        icon_buttons[i].src = "imgs/"+(i)+".png";
+        icon_buttons[i].src = "https://github.com/ABER1047/PrettierGithub/blob/main/imgs/"+(i)+".png?raw=true";
         icon_buttons[i].style.position = "fixed";
         icon_buttons[i].style.width = "24px";
         icon_buttons[i].style.left = (c_w*0.6 + (i%icon_buttons_max_width)*48)+"px";
