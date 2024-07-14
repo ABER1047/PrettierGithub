@@ -75,7 +75,7 @@
 
   #### 2. 点击右上角的图标可添加图标。您可以通过右下角的按钮使用其他设计设置。
   
-  <img src = "imgs/temp/preview2.PNG" width = "640px">
+  <img src = "imgs/temp/preview2.PNG" width = "820px">
 
   </br></br></br></br>
 
