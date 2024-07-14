@@ -39,7 +39,7 @@
 
   #### 2. Click the icons which are on top right to add icons. And You can use additional design settings through the buttons at the bottom right.
   
-  <img src = "imgs/temp/preview2.PNG" width = "640px">
+  <img src = "imgs/temp/preview2.PNG" width = "720px">
 
   </br></br></br></br>
 
@@ -57,7 +57,7 @@
 
   #### 2. 우측 상단에 있는 아이콘들을 눌러 아이콘을 추가할 수 있습니다. 또한, 우측 하단에 있는 버튼들을 통해 추가적인 디자인 설정이 가능합니다.
   
-  <img src = "imgs/temp/preview2.PNG" width = "640px">
+  <img src = "imgs/temp/preview2.PNG" width = "720px">
 
   </br></br></br></br>
 
