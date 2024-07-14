@@ -219,7 +219,7 @@ function loadDesign()
         {
             tmp_output += "<code>"
         }
-        tmp_output += "<img src='imgs/"+(selected_icons_queue[k])+".png'style='width:"+(img_size)+"'>";
+        tmp_output += "<img src='https://github.com/ABER1047/PrettierGithub/blob/main/imgs/"+(selected_icons_queue[k])+".png?raw=true'style='width:"+(img_size)+"'>";
         if (underBarEffectCheckBox.checked)
         {
             tmp_output += "</code>"
