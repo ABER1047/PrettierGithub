@@ -241,6 +241,7 @@ function loadDesign()
     }
     else
     {
+        codeOutputTitle.innerHTML = "";
         codeOutput.innerText = "";
     }
     console.log(tmp_output);
