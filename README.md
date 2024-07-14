@@ -17,6 +17,7 @@
   <div align = "center">
       <img src = "imgs/temp/preview.PNG" width = "640px">
   </div>
+  
     
   # - Index
     
@@ -28,6 +29,7 @@
 
   - <a href = "https://github.com/ABER1047/PrettierGithub?tab=readme-ov-file#guideline-中文">中文</a>
 
+  --------------------------
 
   # Guideline
 
@@ -45,6 +47,8 @@
 
   </br>
 
+  --------------------------
+
   # Guideline [한국어]
 
   #### 1. <a href = "https://aber1047.github.io/PrettierGithub/">'Prettier Github*'</a> 웹사이트에 접속해주세요.
@@ -60,6 +64,8 @@
   #### 3. 완성된 디자인을 적용하기 위해, 좌측 하단의 코드를 깃허브 프로필(README.md)에 복사-붙여넣기 해주세요. 
 
   </br>
+
+  --------------------------
 
   # Guideline [中文]
 
