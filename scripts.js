@@ -20,6 +20,7 @@ var ImageSizeText = document.getElementById("ImageSizeText");
 var alignSelectorText = document.getElementById("alignSelectorText");
 var alignSelectorValueText = document.getElementById("alignSelectorValueText");
 var alignSelector = document.getElementById("alignSelector");
+var codeOutputTitle = document.getElementById("codeOutputTitle");
 //#endregion
 
 
@@ -235,7 +236,8 @@ function loadDesign()
     innerBox.innerHTML = tmp_output;
     if (selected_icons_queue.length > 0)
     {
-        codeOutput.innerText = "Copy & Paste below code!\n\n"+tmp_output;
+        codeOutputTitle.innerHTML = "Copy & Paste below code!</br></br></br>";
+        codeOutput.innerText = tmp_output;
     }
     else
     {
