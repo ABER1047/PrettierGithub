@@ -1,10 +1,11 @@
 <div align = "center">
   
-  <img src = "imgs/temp/Title.png" width = "480px">
+  <img src = "imgs/temp/Title_github.png" width = "480px">
 
   ------------------
 
-  ### Prettier Github is a project to make github profile much prettier
+  ### Prettier Github is a project to make github profile much prettier!
+  #### 깃허브 프로필을 더 이쁘게 꾸며보세요!
   #### This project was developed for people who decorated their profiles with inspiration from my profile design to decorate much easier
   
   </br>
