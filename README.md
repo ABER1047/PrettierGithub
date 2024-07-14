@@ -21,11 +21,11 @@
     
   - <a href = "https://github.com/ABER1047/PrettierGithub?tab=readme-ov-file#guideline-english">English</a>
     
-  - <a href = "https://github.com/ABER1047/PrettierGithub?tab=readme-ov-file#guideline-korean">Korean</a>
+  - <a href = "https://github.com/ABER1047/PrettierGithub?tab=readme-ov-file#guideline-korean">한국어</a>
 
-  - <a>Japanese</a>
+  - <a>日本語</a>
 
-  - <a>Chinese</a>
+  - <a>中文</a>
 
 
   # Guideline (English)
