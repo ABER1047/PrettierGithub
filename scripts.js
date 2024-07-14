@@ -29,7 +29,7 @@ var color_table = [ "#0d1117", "#0a0c10", "#ffffff" ];
 var text_color_table = [ "#ffffff", "#ffffff", "#000000" ];
 var c_w = 0, c_h = 0;
 var img_size = "24px", imageMargin = 1, imageAlign = "center";
-var icon_buttons_num = 59;
+var icon_buttons_num = 80;
 var icon_buttons = [];
 var icon_buttons_max_width = 15;
 var iconButtonsEvent_activated = false;
