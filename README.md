@@ -1,6 +1,6 @@
 <div align = "center">
   
-  <img src = "imgs/temp/Title.png" width = "480px">
+  <img src = "imgs/temp/Title_github.png" width = "480px">
 
   ------------------
 
