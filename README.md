@@ -19,9 +19,9 @@
     
   # - Index
     
-  - <a href = "https://github.com/ABER1047/PrettierGithub/new/main?filename=README.md#guideline-english">English</a>
+  - <a href = "https://github.com/ABER1047/PrettierGithub?tab=readme-ov-file#guideline-english">English</a>
     
-  - <a href = "https://github.com/ABER1047/PrettierGithub/new/main?filename=README.md#guideline-korean">Korean</a>
+  - <a href = "https://github.com/ABER1047/PrettierGithub?tab=readme-ov-file#guideline-korean">Korean</a>
 
   - <a>Japanese</a>
 
