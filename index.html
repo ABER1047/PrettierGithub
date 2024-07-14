@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang = "kor">
+    <head>
+        <meta name="viewport" content = "user-scalable = no, initial-scale = 0.5, maximum-scale = 0.5, minimum-scale = 0.5, width = device-width" />
+        <meta charset = "utf-8">
+        <meta name = "viewport" http-equiv = "Content-Security-Policy">
+        
+        <link rel = "icon" href = "imgs/58.png">
+        <link rel = "stylesheet" href = "designs.css">
+        <title>Prettier Github*</title>
+    </head>
+    
+    <body id = "body_t" class = "body_t">
+        <div class = "mainBackground" id = "mainBackground" style = "z-index : 0; width : 100%; height : 100%; background : #0d1117; position : absolute; top : 0px; left : 0px;"></div>
+        
+        <div class = "subBackground" id = "subBackground" style = "width : 100%; height : 96px; background : #0000008a; position : absolute; top : 0px; left : 0px;"></div>
+        <div class = "subBackgroundOutline" id = "subBackgroundOutline" style = "width : 100%; height : 1px; background : #30363d; position : absolute; top : 96px; left : 0px;"></div>
+        
+        <a href = "https://github.com/ABER1047/PrettierGithub" target = "_blank"><img class = "githubIcon" id = "githubIcon" src = "imgs/58.png" style = "position : absolute; top : 12px; left : 16px; width : 32px;"></a>
+        
+        <div class = "themeSelectorButton" id = "themeSelectorButton0" style = "background : #0d1117; left : 95%;"></div>
+        <div class = "themeSelectorButton" id = "themeSelectorButton1" style = "background : #0a0c10; left : 92%;"></div>
+        <div class = "themeSelectorButton" id = "themeSelectorButton2" style = "background : #ffffff; left : 89%; filter : drop-shadow(1px 0 0px black) drop-shadow(0 1px 0 black) drop-shadow(-1px 0 0px black) drop-shadow(0 -1px 0 black);"></div>
+        
+        <div class = "SelectedColorText" id = "SelectedColorText" style = "color : #ffffff; position : absolute; top : 1%; left : var(--SelectedColorText_xx);">
+            <div style = "font-size : 12px; text-align : center; font-weight : bold;">Current</br>Theme</div>
+        </div>
+        
+        <div class = "textBoxBG" id = "textBoxBG" style = "width : 894px; height : 100%; background : #0d1117; color : #ffffff;">
+            <div style = "font-size : 10px; text-align : left; margin : 16px;"></br>ABER1047/README.md</br></div>
+            <div style = "font-size : 24px; font-weight : bold; text-align : center; font-family : customfont_arial;"></br>Preview</div>
+            
+            <a href = "https://github.com/ABER1047" target = "_blank">
+                <div style = "font-size : 10px; text-align : center; margin : 16px; margin-top : 685px;">Powered by Github</br>@ABER1047</div>
+            </a>
+        <div id = "innerBox" style = "margin : 16px;"></div></div>
+        
+        <div id = "ImageSizeText" style = "font-size : 16px; font-family : customfont_bm; color : #ffffff; top : 93%; left : 88.2%; font-weight : bold; position : absolute;">Image Size</div>
+        <div id = "ImageSizeValueText" style = "font-size : 15px; font-family : customfont_bm; color : #ffffff; top : 95.5%; left : 97%; position : absolute;">24px</div>
+        <input id = "imgSizeSelector" class = "imgSizeSelector" type = "range" min = "1" max = "192" value = "24">
+        
+        <div id = "marginSelectorText" style = "font-size : 16px; font-family : customfont_bm; color : #ffffff; top : 93%; left : 78.2%; font-weight : bold; position : absolute;">Margin</div>
+        <div id = "marginSelectorValueText" style = "font-size : 15px; font-family : customfont_bm; color : #ffffff; top : 95.5%; left : 86.6%; position : absolute;">1</div>
+        <input id = "marginSelector" class = "marginSelector" type = "range" min = "0" max = "4" value = "1">
+        
+        <div id = "alignSelectorText" style = "font-size : 16px; font-family : customfont_bm; color : #ffffff; top : 87%; left : 88.2%; font-weight : bold; position : absolute;">Align</div>
+        <div id = "alignSelectorValueText" style = "font-size : 15px; font-family : customfont_bm; color : #ffffff; top : 89.5%; left : 97%; position : absolute;">center</div>
+        <input id = "alignSelector" class = "alignSelector" type = "range" min = "-1" max = "1" value = "0">
+        
+        <input type = "checkbox" id = "underBarEffectCheckBox" name = "underBarEffectCheckBox" value = "true" style = "position : absolute; top : 95.4%; left : 58%;">
+        <div id = "underBarEffectText" style = "font-size : 16px; font-family : customfont_bm; color : #ffffff; top : 95.5%; left : 59.5%; font-weight : bold; position : absolute;">Add Underbar Effect</div>
+        
+        <div id = "iconButtonsParents"></div>
+        
+        <div id = "codeOutput" style = "left : 192px; top : 60%; width : 860px; font-size : 12px; color : #ffffff; position : absolute; text-align : center; margin : 16px;"></div>
+     </body>
+    
+    <script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src = "https://cdn.jsdelivr.net/gh/ABER1047/Forme/scripts.js"></script>
+    <script src = "scripts.js"></script>
+</html>
