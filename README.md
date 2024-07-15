@@ -37,8 +37,8 @@
 
 <div align='center'>
 
-|Contact👋</br></br><div align='center'><a href='https://discord.gg/TcG38dPRjM'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/51.png'></a>&nbsp;&nbsp;&nbsp;<a href='1047asd44@gmail.com'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/53.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://github.com/ABER1047'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/58.png'></a></div>|
-|--|
+#### Contact👋</br></br><div align='center'><a href='https://discord.gg/TcG38dPRjM'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/51.png'></a>&nbsp;&nbsp;&nbsp;<a href='1047asd44@gmail.com'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/53.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://github.com/ABER1047'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/58.png'></a></div>
+
 </div>
 
 
