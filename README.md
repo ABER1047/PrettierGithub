@@ -12,7 +12,7 @@
 
   <div align = "left">
 
-  # - Example
+  # - Preview
 
   <div align = "center">
       <img src = "imgs/temp/preview.PNG" width = "640px">
