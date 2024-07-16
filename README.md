@@ -19,13 +19,20 @@
   </div>
 
   
-  
 
 <div align='center'>
 
-|Adobe (With Underbar Effect)👇</br></br><div align='center'><code><a href='https://github.com/ABER1047/PrettierGithub'><img width='32px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/10.png'></a></code>&nbsp;<code><a href='https://github.com/ABER1047/PrettierGithub'><img width='32px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/11.png'></a></code>&nbsp;<code><a href='https://github.com/ABER1047/PrettierGithub'><img width='32px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/12.png'></a></code>&nbsp;<code><a href='https://github.com/ABER1047/PrettierGithub'><img width='32px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/13.png'></a></code>&nbsp;<code><a href='https://github.com/ABER1047/PrettierGithub'><img width='32px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/14.png'></a></code>&nbsp;<code><a href='https://github.com/ABER1047/PrettierGithub'><img width='32px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/15.png'></a></code></div>|
+|With Underbar Effect & no hyperlinked👇</br></br><div align='center'><code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/10.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/11.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/12.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/13.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/14.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/15.png'></code></div>|
 |--|
 </div>
+
+
+<div align='center'>
+
+#### Hyperlinked</br></br><div align='center'><a href='https://discord.gg/TcG38dPRjM'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/51.png'></a>&nbsp;&nbsp;&nbsp;<a href='1047asd44@gmail.com'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/53.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://github.com/ABER1047'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/58.png'></a></div>
+
+</div>
+
 
 <div align='center'>
 
@@ -35,11 +42,7 @@
 
 
 
-<div align='center'>
 
-#### Contact👋</br></br><div align='center'><a href='https://discord.gg/TcG38dPRjM'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/51.png'></a>&nbsp;&nbsp;&nbsp;<a href='1047asd44@gmail.com'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/53.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://github.com/ABER1047'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/58.png'></a></div>
-
-</div>
 
 
   
