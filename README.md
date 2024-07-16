@@ -22,21 +22,21 @@
 
 <div align='center'>
 
-|With Underbar Effect & no hyperlinked👇</br></br><div align='center'><code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/10.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/11.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/12.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/13.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/14.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/15.png'></code></div>|
+|👇With Underbar Effect & no hyperlinked</br></br><div align='center'><code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/10.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/11.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/12.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/13.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/14.png'></code>&nbsp;<code><img width='40px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/15.png'></code></div>|
 |--|
 </div>
 
 
 <div align='center'>
 
-#### Hyperlinked</br></br><div align='center'><a href='https://discord.gg/TcG38dPRjM'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/51.png'></a>&nbsp;&nbsp;&nbsp;<a href='1047asd44@gmail.com'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/53.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://github.com/ABER1047'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/58.png'></a></div>
+#### 🔗Hyperlinked (none outer box ☒)</br></br><div align='center'><a href='https://discord.gg/TcG38dPRjM'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/51.png'></a>&nbsp;&nbsp;&nbsp;<a href='1047asd44@gmail.com'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/53.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://github.com/ABER1047'><img width='33px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/58.png'></a></div>
 
 </div>
 
 
 <div align='center'>
 
-|My Skills🥳</br></br><div align='center'><a href='https://en.wikipedia.org/wiki/HTML'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/0.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/css'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/1.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/javascript'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/2.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/TypeScript'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/3.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/C_(programming_language)'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/16.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/C%2B%2B'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/17.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/C_Sharp_(programming_language)'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/18.png'></a></div>|
+|🔗Hyperlinked (with outer box ☐)</br></br><div align='center'><a href='https://en.wikipedia.org/wiki/HTML'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/0.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/css'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/1.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/javascript'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/2.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/TypeScript'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/3.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/C_(programming_language)'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/16.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/C%2B%2B'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/17.png'></a>&nbsp;&nbsp;&nbsp;<a href='https://en.wikipedia.org/wiki/C_Sharp_(programming_language)'><img width='43px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/18.png'></a></div>|
 |--|
 </div>
 
