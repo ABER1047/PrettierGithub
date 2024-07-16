@@ -1,4 +1,4 @@
-//#region variables for element id
+//#region element저장용 변수
 var themeSelectorButton = [];
 for(var i = 0; i < 3; i++)
 {
@@ -21,38 +21,101 @@ var alignSelectorText = document.getElementById("alignSelectorText");
 var alignSelectorValueText = document.getElementById("alignSelectorValueText");
 var alignSelector = document.getElementById("alignSelector");
 var codeOutputTitle = document.getElementById("codeOutputTitle");
+var menuIcon = document.getElementById("menuIcon");
+var textBoxBGText = document.getElementById("textBoxBGText");
+var outerBoxCheckBox = document.getElementById("outerBoxCheckBox");
+var closeButton = document.getElementById("closeButton");
+var addHyperlinkButton = document.getElementById("addHyperlinkButton");
+var hyperlinkWindow = document.getElementById("hyperlinkWindow");
+var linkInput = document.getElementById("linkInput");
 //#endregion
 
 
+//#region 초기 변수 선언
 var current_theme = 0;
 var color_table = [ "#0d1117", "#0a0c10", "#ffffff" ];
-var text_color_table = [ "#ffffff", "#ffffff", "#000000" ];
+var subBG_color_table = [ "#010409", "#010409", "#f6f8fa" ];
 var c_w = 0, c_h = 0;
-var img_size = "24px", imageMargin = 1, imageAlign = "center";
-var icon_buttons_num = 80;
+var img_size = 24, imageMargin = 1, imageAlign = "center";
+var icon_buttons_num = 82;
 var icon_buttons = [];
 var icon_buttons_max_width = 15;
 var iconButtonsEvent_activated = false;
 var selected_icons_queue = [];
+var selected_icons_link_queue = [];
+var hyperlinkWindow_opened = false, force_run = false;
 init(); //초기값 설정
+//#endregion
+
+
+//#region 버튼 클릭 관련 함수
+
+
+//하이퍼링크 추가 윈도우
+addHyperlinkButton.addEventListener('click', function() 
+{
+    selected_icons_link_queue.push((linkInput.value == "") ? -4 : linkInput.value);
+    openAndCloseHyperlinkWindow(true);
+    setTimeout(loadDesign,150);
+});
+
+function openAndCloseHyperlinkWindow(argument0)
+{
+    if (argument0 != true && argument0 != false)
+    {
+        argument0 = hyperlinkWindow_opened;
+    }
+    hyperlinkWindow.style.opacity = (argument0) ? 0 : 1;
+    setTimeout(HyperlinkWindowAnimation1,90,argument0);
+    setTimeout(HyperlinkWindowAnimation2,150,argument0);
+}
+
+function HyperlinkWindowAnimation1(argument0)
+{
+    hyperlinkWindow_opened = !argument0;
+}
+
+function HyperlinkWindowAnimation2(argument0)
+{
+    hyperlinkWindow.style.top = (argument0) ? "-999px" : "420px";
+    linkInput.value = "";
+}
+
+closeButton.addEventListener('click', function()
+{
+    selected_icons_link_queue.push(-4);
+    openAndCloseHyperlinkWindow();
+});
+
+
+
 
 
 themeSelectorButton[0].addEventListener("click",function()
 {
-    current_theme = 0;
-    themeSelected();
+    if (!hyperlinkWindow_opened)
+    {
+        current_theme = 0;
+        themeSelected();
+    }
 });
 
 themeSelectorButton[1].addEventListener("click",function()
 {
-    current_theme = 1;
-    themeSelected();
+    if (!hyperlinkWindow_opened)
+    {
+        current_theme = 1;
+        themeSelected();
+    }
 });
 
 themeSelectorButton[2].addEventListener("click",function()
 {
-    current_theme = 2;
-    themeSelected();
+    if (!hyperlinkWindow_opened)
+    {
+        current_theme = 2;
+        themeSelected();
+    }
 });
 
 
@@ -61,59 +124,56 @@ function themeSelected()
     document.documentElement.style.setProperty("--SelectedColorText_xx",c_w*(0.95-current_theme*0.03)-5+"px");
     mainBackground.style.background = color_table[current_theme];
     textBoxBG.style.background = color_table[current_theme];
-    textBoxBG.style.color = text_color_table[current_theme];
-    underBarEffectText.style.color = text_color_table[current_theme];
-    codeOutput.style.color = text_color_table[current_theme];
-    ImageSizeValueText.style.color = text_color_table[current_theme];
-    marginSelectorValueText.style.color = text_color_table[current_theme];
-    marginSelectorText.style.color = text_color_table[current_theme];
-    ImageSizeText.style.color = text_color_table[current_theme];
-    alignSelectorText.style.color = text_color_table[current_theme];
-    alignSelectorValueText.style.color = text_color_table[current_theme];
+    subBackground.style.background = subBG_color_table[current_theme];
+    menuIcon.style.background = subBG_color_table[current_theme];
+    if (outerBoxCheckBox.checked)
+    {
+        document.getElementById("outerBox").style.background = color_table[current_theme];
+    }
 }
 
-function init()
-{
-    c_w = window.innerWidth;
-    c_h = window.innerHeight;
-    themeSelected();
-    
-    
-    //아이콘 생성 버튼 생성
-    for(var i = 0; i <= icon_buttons_num; i++)
-    {
-        icon_buttons[i] = document.createElement("img");
-        icon_buttons[i].style.top = (c_h*0.2 + floor(i/icon_buttons_max_width)*42)+"px";
-        icon_buttons[i].src = "imgs/"+(i)+".png";
-        icon_buttons[i].style.position = "fixed";
-        icon_buttons[i].style.width = "24px";
-        icon_buttons[i].style.left = (c_w*0.6 + (i%icon_buttons_max_width)*48)+"px";
-        icon_buttons[i].style.opacity = 0.6;
-        icon_buttons[i].style.zIndex = 320;
-        icon_buttons[i].style.transition = "opacity ease 0.2s, filter ease 0.2s";
-        icon_buttons[i].id = "icon_buttons_"+(i);
-        iconButtonsParents.appendChild(icon_buttons[i]);
-    }
-    
-    stepEvent();
-}
 
 //imgSizeSelector button
 imgSizeSelector.addEventListener("input",function()
 {
-    var tmp_value = (imgSizeSelector.value)+"px";
-    img_size = tmp_value;
-    ImageSizeValueText.innerHTML = tmp_value;
+    img_size = (imgSizeSelector.value)*1.0;
+    ImageSizeValueText.innerHTML = (img_size)+"px";
     
     loadDesign();
 })
 
 
 //underBarEffectCheckBox
-underBarEffectCheckBox.addEventListener("click",function()
+underBarEffectCheckBox.addEventListener("click",loadDesign);
+
+
+//outerBoxCheckBox
+outerBoxCheckBox.addEventListener("click",loadDesign);
+
+
+//클립보드로 코드 복사
+codeOutput.addEventListener("click",function()
 {
-    loadDesign();
+    navigator.clipboard.writeText(codeOutput.str_real);
+    codeOutputTitle.innerHTML = "Copied on clipboard✅</br></br></br>";
+    codeOutput.style.transition = "opacity 0s";
+    codeOutput.style.opacity = 0.5;
+    setTimeout(clipboard_animation1,100);
 })
+
+function clipboard_animation1()
+{
+    codeOutput.style.transition = "opacity 0.5s";
+    setTimeout(clipboard_animation2,100);
+}
+
+function clipboard_animation2()
+{
+    codeOutput.style.opacity = 1;
+}
+
+
+
 
 
 //alignSelector
@@ -150,99 +210,180 @@ marginSelector.addEventListener("input",function()
 })
 
 
-
-function stepEvent()
-{
-    iconButtonsEvent_activated = false;
-    for(var i = 0; i <= icon_buttons_num; i++)
-    {
-        icon_buttons[i].addEventListener("click",iconButtonsClickEvent);
-        icon_buttons[i].param0 = i;
-        
-        icon_buttons[i].addEventListener("mouseover",iconButtonsEvent);
-        icon_buttons[i].param0 = i;
-        
-        icon_buttons[i].addEventListener("mouseleave",iconButtonsEvent);
-        icon_buttons[i].param0 = i;
-    }
-    
-    setTimeout(stepEvent,100);
-}
-
-
 function iconButtonsEvent(evt)
 {
-    var i = evt.currentTarget.param0;
-    var tmp_ins = icon_buttons[i];
+    if (!hyperlinkWindow_opened)
+    {
+        var i = evt.currentTarget.param0;
+        var tmp_ins = icon_buttons[i];
 
-    if (tmp_ins.style.opacity == 0.6)
-    {
-        tmp_ins.style.opacity = 1;
-    }
-    else
-    {
-        tmp_ins.style.opacity = 0.6;
+        if (tmp_ins.style.opacity == 0.6)
+        {
+            tmp_ins.style.opacity = 1;
+        }
+        else
+        {
+            tmp_ins.style.opacity = 0.6;
+        }
     }
 }
 
 function iconButtonsClickEvent(evt)
 {
-    var i = evt.currentTarget.param0;
-    var tmp_ins = icon_buttons[i];
+    if (!hyperlinkWindow_opened)
+    {
+        var i = evt.currentTarget.param0;
+        var tmp_ins = icon_buttons[i];
 
-    if (tmp_ins.style.filter != "")
-    {
-        tmp_ins.style.filter = "";
-        var index = selected_icons_queue.indexOf(i);
-        selected_icons_queue.splice(index, 1);
-        tmp_ins.style.opacity = 1;
-    }
-    else
-    {
-        tmp_ins.style.opacity = 0.6;
-        tmp_ins.style.filter = "drop-shadow(2px 0 0px white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0px white) drop-shadow(0 -2px 0 white)";
-        selected_icons_queue.push(i);
-    }
-    
-    loadDesign();
-    console.log(selected_icons_queue);
-}
-
-function loadDesign()
-{
-    console.log(underBarEffectCheckBox.value);
-    
-    //선택된 아이콘들 그리기
-    var tmp_output = "<div align='"+(imageAlign)+"'>";
-    for(var k = 0; k < selected_icons_queue.length; k++)
-    {
-        if (underBarEffectCheckBox.checked)
+        if (tmp_ins.style.filter != "")
         {
-            tmp_output += "<code>"
+            tmp_ins.style.filter = "";
+            var index = selected_icons_queue.indexOf(i);
+            selected_icons_queue.splice(index, 1);
+            selected_icons_link_queue.splice(index, 1);
+            tmp_ins.style.opacity = 1;
         }
-        tmp_output += "<img src='https://github.com/ABER1047/PrettierGithub/blob/main/imgs/"+(selected_icons_queue[k])+".png?raw=true'style='width:"+(img_size)+"'>";
-        if (underBarEffectCheckBox.checked)
+        else
         {
-            tmp_output += "</code>"
+            tmp_ins.style.opacity = 0.6;
+            tmp_ins.style.filter = "drop-shadow(2px 0 0px white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0px white) drop-shadow(0 -2px 0 white)";
+            selected_icons_queue.push(i);
+            
+            openAndCloseHyperlinkWindow(false);
         }
         
-        for (var kk = 0; kk < imageMargin; kk++)
+        loadDesign();
+        console.log(selected_icons_queue);
+    }
+}
+//#endregion
+
+
+
+//#region 설정된 디자인 불러오기
+function loadDesign()
+{
+    if (!hyperlinkWindow_opened)
+    {
+        console.log(underBarEffectCheckBox.value);
+        
+        //선택된 아이콘들 그리기
+        var tmp_todraw_output = ((outerBoxCheckBox.checked) ? "<div align='center'>" : "<div align='"+(imageAlign)+"'>");
+        var tmp_output = ((outerBoxCheckBox.checked) ? "<div align='"+(imageAlign)+"'>\n\n|" : "")+tmp_todraw_output;
+        for(var k = 0; k < selected_icons_queue.length; k++)
         {
-            tmp_output += "&nbsp";
+            if (underBarEffectCheckBox.checked)
+            {
+                tmp_output += "<code>"
+            }
+            
+            console.log(selected_icons_link_queue);
+            var tmp_str = "<img width='"+(img_size)+"px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/"+(selected_icons_queue[k])+".png'>";
+            if (selected_icons_link_queue[k] == -4 || selected_icons_link_queue[k] == undefined)
+            {
+                tmp_output += (tmp_str);
+            }
+            else
+            {
+                tmp_output += "<a href='"+(selected_icons_link_queue[k])+"'>"+(tmp_str)+"</a>";
+            }
+            
+            
+            if (underBarEffectCheckBox.checked)
+            {
+                tmp_output += "</code>"
+            }
+            
+            for (var kk = 0; (k != selected_icons_queue.length-1 && kk < imageMargin); kk++)
+            {
+                tmp_output += "&nbsp;";
+            }
+        }
+        tmp_output += "</div>";
+        tmp_todraw_output += tmp_output;
+
+        
+        innerBox.innerHTML = tmp_todraw_output.replace("|","");
+        
+        if (outerBoxCheckBox.checked)
+        {
+            var tmp_width = ((img_size + 6*(marginSelector.value))*selected_icons_queue.length);
+            if (tmp_width > 850)
+            {
+                tmp_width = 850;
+            }
+            tmp_output += "|\n|--|\n</div>";
+            innerBox.innerHTML = "<div id = 'outerBox' class = 'outerBox' style = 'width : "+(tmp_width)+"px; padding : 6px;'>"+(innerBox.innerHTML)+"</div>";
+            innerBox.innerHTML = "<div class = 'alignSetter' align = "+(imageAlign)+">"+(innerBox.innerHTML)+"</div>";
+        }
+        
+        
+        if (selected_icons_queue.length > 0)
+        {
+            codeOutputTitle.innerHTML = "Copy & Paste below code!</br></br></br>";
+            codeOutput.innerText = (tmp_output.length > 240) ? tmp_output.substring(0,240)+"..." : tmp_output;
+            codeOutput.str_real = tmp_output;
+        }
+        else
+        {
+            codeOutputTitle.innerHTML = "";
+            codeOutput.innerText = "";
+        }
+        textBoxBGText.style.textAlign = imageAlign;
+        console.log(tmp_output);
+    }
+}
+//#endregion
+
+
+
+
+//#region 시스템 함수
+function init()
+{
+    c_w = window.innerWidth;
+    c_h = window.innerHeight;
+    themeSelected();
+    
+    
+    //아이콘 생성 버튼 생성
+    for(var i = 0; i <= icon_buttons_num; i++)
+    {
+        icon_buttons[i] = document.createElement("img");
+        icon_buttons[i].style.top = (c_h*0.2 + floor(i/icon_buttons_max_width)*42)+"px";
+        icon_buttons[i].src = "imgs/"+(i)+".png";
+        icon_buttons[i].style.position = "fixed";
+        icon_buttons[i].style.width = "24px";
+        icon_buttons[i].style.left = (c_w*0.6 + (i%icon_buttons_max_width)*48)+"px";
+        icon_buttons[i].style.opacity = 0.6;
+        icon_buttons[i].style.zIndex = 320;
+        icon_buttons[i].style.transition = "opacity ease 0.2s, filter ease 0.2s";
+        icon_buttons[i].id = "icon_buttons_"+(i);
+        iconButtonsParents.appendChild(icon_buttons[i]);
+    }
+    
+    stepEvent();
+}
+
+//스탭 이벤트
+function stepEvent()
+{
+    if (!hyperlinkWindow_opened)
+    {
+        iconButtonsEvent_activated = false;
+        for(var i = 0; i <= icon_buttons_num; i++)
+        {
+            icon_buttons[i].addEventListener("click",iconButtonsClickEvent);
+            icon_buttons[i].param0 = i;
+            
+            icon_buttons[i].addEventListener("mouseover",iconButtonsEvent);
+            icon_buttons[i].param0 = i;
+            
+            icon_buttons[i].addEventListener("mouseleave",iconButtonsEvent);
+            icon_buttons[i].param0 = i;
         }
     }
-    tmp_output += "</div>";
-    
-    innerBox.innerHTML = tmp_output;
-    if (selected_icons_queue.length > 0)
-    {
-        codeOutputTitle.innerHTML = "Copy & Paste below code!</br></br></br>";
-        codeOutput.innerText = tmp_output;
-    }
-    else
-    {
-        codeOutputTitle.innerHTML = "";
-        codeOutput.innerText = "";
-    }
-    console.log(tmp_output);
+    setTimeout(stepEvent,100);
 }
+
+//#endregion
