@@ -205,7 +205,7 @@ body
 
 
 
-
+/* hyperlinkWindow */
 .hyperlinkWindow 
 {
     opacity : 0;
@@ -253,6 +253,7 @@ body
     background-color: #29903b;
 }
 
+/* closeButton */
 #closeButton 
 {
     background-color: #21262d;
@@ -264,6 +265,8 @@ body
     background-color: #292e36;
 }
 
+
+/* addTextButton */
 #addTextButton
 {
     mix-blend-mode : difference;
@@ -281,6 +284,8 @@ body
     background-color: #3b4049;
 }
 
+
+/* resetButton */
 #resetButton
 {
     mix-blend-mode : difference;
@@ -298,6 +303,9 @@ body
     background-color: #3b4049;
 }
 
+
+
+/* buttons */
 .buttons 
 {
     display: flex;
