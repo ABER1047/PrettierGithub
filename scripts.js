@@ -28,6 +28,8 @@ var closeButton = document.getElementById("closeButton");
 var addHyperlinkButton = document.getElementById("addHyperlinkButton");
 var hyperlinkWindow = document.getElementById("hyperlinkWindow");
 var linkInput = document.getElementById("linkInput");
+var addTextButton = document.getElementById("addTextButton");
+var resetButton = document.getElementById("resetButton");
 //#endregion
 
 
@@ -43,7 +45,8 @@ var icon_buttons_max_width = 15;
 var iconButtonsEvent_activated = false;
 var selected_icons_queue = [];
 var selected_icons_link_queue = [];
-var hyperlinkWindow_opened = false, force_run = false;
+var text_queue = [];
+var hyperlinkWindow_opened = false, force_run = false, windowType = 0;
 init(); //초기값 설정
 //#endregion
 
@@ -54,13 +57,67 @@ init(); //초기값 설정
 //하이퍼링크 추가 윈도우
 addHyperlinkButton.addEventListener('click', function() 
 {
-    selected_icons_link_queue.push((linkInput.value == "") ? -4 : linkInput.value);
+    var tmp_input = linkInput.value;
+    tmp_input = (tmp_input == undefined) ? "" : tmp_input;
+    switch(windowType)
+    {
+        //하이퍼링크 추가 윈도우
+        case 0:
+            selected_icons_link_queue.push((tmp_input == "") ? "https://rebrand.ly/e1d8xfm" : tmp_input);
+        break;
+        
+        //텍스트 추가 윈도우
+        case 1:
+            text_queue.push((tmp_input != "") ? tmp_input : " ");
+            console.log("tmp_input : "+tmp_input);
+            console.log(text_queue);
+        break;
+    }
     openAndCloseHyperlinkWindow(true);
     setTimeout(loadDesign,150);
 });
 
+//텍스트 추가 버튼
+addTextButton.addEventListener('click', function() 
+{
+    if (!hyperlinkWindow_opened)
+    {
+        windowType = 1;
+        selected_icons_queue.push(-4);
+        openAndCloseHyperlinkWindow(false);
+        setTimeout(loadDesign,150);
+    }
+});
+
+//리셋 버튼
+resetButton.addEventListener('click', function() 
+{
+    if (!hyperlinkWindow_opened)
+    {
+        window.location.reload();
+    }
+});
+
+
+//설정 창
 function openAndCloseHyperlinkWindow(argument0)
 {
+    linkInput.value = "";
+    switch(windowType)
+    {
+        //하이퍼링크 추가 윈도우
+        case 0:
+            addHyperlinkButton.innerHTML = "Add hyperlink on icon";
+            linkInput.placeholder = "https://github.com/ABER1047/PrettierGithub";
+        break;
+        
+        //텍스트 추가 윈도우
+        case 1:
+            addHyperlinkButton.innerHTML = "Add text";
+            linkInput.placeholder = "Enter text here";
+        break;
+    }
+    
     if (argument0 != true && argument0 != false)
     {
         argument0 = hyperlinkWindow_opened;
@@ -78,12 +135,22 @@ function HyperlinkWindowAnimation1(argument0)
 function HyperlinkWindowAnimation2(argument0)
 {
     hyperlinkWindow.style.top = (argument0) ? "-999px" : "420px";
-    linkInput.value = "";
 }
 
 closeButton.addEventListener('click', function()
 {
-    selected_icons_link_queue.push(-4);
+    switch(windowType)
+    {
+        //하이퍼링크 추가 윈도우
+        case 0:
+            selected_icons_link_queue.push(-4);
+        break;
+        
+        //텍스트 추가 윈도우
+        case 1:
+            selected_icons_queue.pop();
+        break;
+    }
     openAndCloseHyperlinkWindow();
 });
 
@@ -249,6 +316,7 @@ function iconButtonsClickEvent(evt)
             tmp_ins.style.filter = "drop-shadow(2px 0 0px white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0px white) drop-shadow(0 -2px 0 white)";
             selected_icons_queue.push(i);
             
+            windowType = 0;
             openAndCloseHyperlinkWindow(false);
         }
         
@@ -270,6 +338,7 @@ function loadDesign()
         //선택된 아이콘들 그리기
         var tmp_todraw_output = ((outerBoxCheckBox.checked) ? "<div align='center'>" : "<div align='"+(imageAlign)+"'>");
         var tmp_output = ((outerBoxCheckBox.checked) ? "<div align='"+(imageAlign)+"'>\n\n|" : "")+tmp_todraw_output;
+        var tmp_index = 0;
         for(var k = 0; k < selected_icons_queue.length; k++)
         {
             if (underBarEffectCheckBox.checked)
@@ -278,7 +347,23 @@ function loadDesign()
             }
             
             console.log(selected_icons_link_queue);
-            var tmp_str = "<img width='"+(img_size)+"px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/"+(selected_icons_queue[k])+".png'>";
+            var tmp_str = ""
+            if (selected_icons_queue[k] != -4)
+            { 
+                tmp_str = "<img width='"+(img_size)+"px' src='https://github.com/ABER1047/PrettierGithub/raw/main/imgs/"+(selected_icons_queue[k])+".png'>" 
+            }
+            else
+            {
+                if (text_queue[k] == "")
+                {
+                    tmp_str = "</br></br>";
+                }
+                else
+                {
+                    tmp_str = "</br><a>"+(text_queue[tmp_index])+"</a></br>";
+                    tmp_index ++;
+                }
+            }
             if (selected_icons_link_queue[k] == -4 || selected_icons_link_queue[k] == undefined)
             {
                 tmp_output += (tmp_str);

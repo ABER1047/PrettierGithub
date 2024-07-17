@@ -264,6 +264,40 @@ body
     background-color: #292e36;
 }
 
+#addTextButton
+{
+    mix-blend-mode : difference;
+    font-family : customfont_bm;
+    opacity : 1;
+    position : absolute;
+    left : 60%;
+    top : 14%;
+    background-color: rgb(46, 51, 59);
+    color: white;
+}
+
+#addTextButton:hover 
+{
+    background-color: #3b4049;
+}
+
+#resetButton
+{
+    mix-blend-mode : difference;
+    font-family : customfont_bm;
+    opacity : 1;
+    position : absolute;
+    left : 92%;
+    top : 14%;
+    background-color: rgb(46, 51, 59);
+    color: white;
+}
+
+#resetButton:hover 
+{
+    background-color: #3b4049;
+}
+
 .buttons 
 {
     display: flex;
@@ -277,4 +311,11 @@ button
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+
+a
+{
+    font-family : Arial; 
+    font-size : 16px;
 }
