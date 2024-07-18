@@ -354,23 +354,23 @@ function loadDesign()
             }
             else
             {
-                if (text_queue[k] == "")
+                if (text_queue[tmp_index] == "")
                 {
                     tmp_str = "</br></br>";
                 }
                 else
                 {
-                    tmp_str = "</br><a>"+(text_queue[tmp_index])+"</a></br>";
+                    tmp_str = "<a>\n\n### "+(text_queue[tmp_index])+"\n\n</a>";
                     tmp_index ++;
                 }
             }
-            if (selected_icons_link_queue[k] == -4 || selected_icons_link_queue[k] == undefined)
+            if (selected_icons_link_queue[tmp_index] == -4 || selected_icons_link_queue[tmp_index] == undefined)
             {
                 tmp_output += (tmp_str);
             }
             else
             {
-                tmp_output += "<a href='"+(selected_icons_link_queue[k])+"'>"+(tmp_str)+"</a>";
+                tmp_output += "<a href='"+(selected_icons_link_queue[tmp_index])+"'>"+(tmp_str)+"</a>";
             }
             
             
