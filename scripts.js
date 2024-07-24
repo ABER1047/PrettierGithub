@@ -39,7 +39,7 @@ var color_table = [ "#0d1117", "#0a0c10", "#ffffff" ];
 var subBG_color_table = [ "#010409", "#010409", "#f6f8fa" ];
 var c_w = 0, c_h = 0;
 var img_size = 24, imageMargin = 1, imageAlign = "center";
-var icon_buttons_num = 82;
+var icon_buttons_num = 84;
 var icon_buttons = [];
 var icon_buttons_max_width = 15;
 var iconButtonsEvent_activated = false;
