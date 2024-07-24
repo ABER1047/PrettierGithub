@@ -360,7 +360,7 @@ function loadDesign()
                 }
                 else
                 {
-                    tmp_str = "<a>\n\n### "+(text_queue[tmp_index])+"\n\n</a>";
+                    tmp_str = "</br><a class = 'bold'></br>"+(text_queue[tmp_index])+"\n\n</a></br></br>";
                     tmp_index ++;
                 }
             }
@@ -405,9 +405,19 @@ function loadDesign()
         
         if (selected_icons_queue.length > 0)
         {
+            var tmp_total_output = tmp_output;
+            tmp_total_output = tmp_total_output.replaceAll("</a></br></br>", "</a>");
+            tmp_total_output = tmp_total_output.replaceAll("</br><a class = 'bold'></br>", "<a>\n\n### ")
             codeOutputTitle.innerHTML = "Copy & Paste below code!</br></br></br>";
-            codeOutput.innerText = (tmp_output.length > 240) ? tmp_output.substring(0,240)+"..." : tmp_output;
-            codeOutput.str_real = tmp_output;
+            
+            // "\n"이 몇개인지 체크
+            var matches = tmp_total_output.match(/\n/g);
+            matches = (matches) ? matches.length : 0;
+            
+            var tmp_max_text_num = 240-matches*24;
+            tmp_max_text_num = (tmp_max_text_num < 32) ? 32 : tmp_max_text_num;
+            codeOutput.innerText = (tmp_total_output.length > tmp_max_text_num) ? tmp_total_output.substring(0,tmp_max_text_num)+"..." : tmp_total_output;
+            codeOutput.str_real = tmp_total_output;
         }
         else
         {
